@@ -11,5 +11,5 @@ import Foundation
 import SmartCodable
 
 @objc public class GetRedirectUrlModel: BaseModel, SmartCodable {
-    var obscured: String = ""
+    public var obscured: String = ""
 }

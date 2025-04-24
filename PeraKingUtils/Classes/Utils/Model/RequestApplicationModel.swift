@@ -12,5 +12,5 @@ import SmartCodable
 
 @objc public class RequestApplicationModel: BaseModel, SmartCodable {
     /// 根据此连接跳转即可
-    var obscured: String?
+    public var obscured: String?
 }

@@ -11,13 +11,13 @@ import Foundation
 import SmartCodable
 
 @objc public class MarkUploadModel: BaseModel, SmartCodable {
-    var facebook: FacebookModel?
+    public var facebook: FacebookModel?
 }
 
 
 @objc public class FacebookModel: BaseModel, SmartCodable {
-    var cFBundleURLScheme: String = ""
-    var facebookAppID: String = ""
-    var facebookDisplayName: String = ""
-    var facebookClientToke: String = ""
+    public  var cFBundleURLScheme: String = ""
+    public var facebookAppID: String = ""
+    public var facebookDisplayName: String = ""
+    public var facebookClientToke: String = ""
 }
