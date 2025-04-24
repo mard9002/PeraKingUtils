@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '15.6'
+
+target 'PeraKingUtils_Example' do
+  pod 'PeraKingUtils', :path => '../'
+
+  target 'PeraKingUtils_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
