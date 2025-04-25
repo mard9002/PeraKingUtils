@@ -1,0 +1,6 @@
+framework module PeraKingUtils {
+  umbrella header "PeraKingUtils-umbrella.h"
+
+  export *
+  module * { export * }
+}
