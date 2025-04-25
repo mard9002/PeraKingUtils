@@ -1,6 +1,6 @@
 import UIKit
 
-class CustomTextField: UIView {
+public class CustomTextField: UIView {
     
     // MARK: - Properties
     private let titleLabel = UILabel()
@@ -61,12 +61,12 @@ class CustomTextField: UIView {
     }
     
     // MARK: - Initialization
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
     }
@@ -201,7 +201,7 @@ class CustomTextField: UIView {
 
 // MARK: - UITextFieldDelegate
 extension CustomTextField: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
         value = textField.text ?? ""
         // 结束编辑时也触发回调
         onTextChanged?(value)

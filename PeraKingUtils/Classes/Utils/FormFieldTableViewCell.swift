@@ -89,7 +89,7 @@ public class FormFieldTableViewCell: UITableViewCell {
     ///   - title: 字段标题
     ///   - value: 当前值
     ///   - placeholder: 占位符文本
-    func configureAsSelectable(title: String, value: String = "", placeholder: String = "Please Select") {
+    public func configureAsSelectable(title: String, value: String = "", placeholder: String = "Please Select") {
         customTextField.title = title
         customTextField.value = value
         customTextField.placeholder = placeholder
@@ -102,7 +102,7 @@ public class FormFieldTableViewCell: UITableViewCell {
     ///   - title: 字段标题
     ///   - value: 当前值
     ///   - placeholder: 占位符文本
-    func configureAsEditable(title: String, value: String = "", placeholder: String) {
+    public func configureAsEditable(title: String, value: String = "", placeholder: String) {
         customTextField.title = title
         customTextField.value = value
         customTextField.placeholder = placeholder
@@ -116,7 +116,7 @@ public class FormFieldTableViewCell: UITableViewCell {
     ///   - title: 字段标题
     ///   - value: 当前值
     ///   - placeholder: 占位符文本
-    func configure(type: FieldType, title: String, value: String = "", placeholder: String) {
+    public func configure(type: FieldType, title: String, value: String = "", placeholder: String) {
         switch type {
         case .selectable:
             configureAsSelectable(title: title, value: value, placeholder: placeholder)
@@ -126,7 +126,7 @@ public class FormFieldTableViewCell: UITableViewCell {
     }
     
     /// 获取当前输入值
-    func getValue() -> String {
+    public func getValue() -> String {
         return customTextField.getInputValue()
     }
     
@@ -144,7 +144,7 @@ public class FormFieldTableViewCell: UITableViewCell {
 // MARK: - 使用示例
 class FormFieldTableViewExample {
     
-    func setupTableView(_ tableView: UITableView) {
+    public func setupTableView(_ tableView: UITableView) {
         // 注册单元格
         tableView.register(FormFieldTableViewCell.self, forCellReuseIdentifier: FormFieldTableViewCell.reuseIdentifier)
         
@@ -156,7 +156,7 @@ class FormFieldTableViewExample {
     }
     
     // UITableViewDataSource示例方法
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FormFieldTableViewCell.reuseIdentifier, for: indexPath) as? FormFieldTableViewCell else {
             return UITableViewCell()
         }

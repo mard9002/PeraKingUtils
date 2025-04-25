@@ -12,15 +12,15 @@ import Moya
 import SVProgressHUD
 
 @objc public class UploadDataModel: NSObject {
-    var waterproof: String
-    var unleashing: String
-    var escape: String
-    var carried: Data
-    var expensive: String
-    let across: String = "\(Int(Date().timeIntervalSince1970))"
-    let rect: String = "1"
+    public var waterproof: String
+    public var unleashing: String
+    public var escape: String
+    public var carried: Data
+    public var expensive: String
+    public let across: String = "\(Int(Date().timeIntervalSince1970))"
+    public let rect: String = "1"
     
-    init(waterproof: String, unleashing: String, escape: String, carried: Data, expensive: String) {
+    public init(waterproof: String, unleashing: String, escape: String, carried: Data, expensive: String) {
         self.waterproof = waterproof
         self.unleashing = unleashing
         self.escape = escape
@@ -31,23 +31,23 @@ import SVProgressHUD
 
 
 @objc public class EventModel: NSObject {
-    var waste: String
-    var sapiist: String
-    var gym: String = ""
-    let innocent: String = DeviceInfoManager.shared.idfv
-    let sobbed: String = DeviceInfoManager.shared.idfa
+    public var waste: String
+    public var sapiist: String
+    public var gym: String = ""
+    public let innocent: String = DeviceInfoManager.shared.idfv
+    public let sobbed: String = DeviceInfoManager.shared.idfa
     /// 京都
-    var woke: String = ""
+    public var woke: String = ""
     /// 唯独
-    var trip: String = ""
+    public var trip: String = ""
     
-    var dropped: String
+    public var dropped: String
     
-    var nowhere: String
+    public var nowhere: String
     
-    let youll: String = "\(Int(Date().timeIntervalSince1970))"
+    public let youll: String = "\(Int(Date().timeIntervalSince1970))"
     
-    init(waste: String, sapiist: String, gym: String, dropped: String, nowhere: String) {
+    public init(waste: String, sapiist: String, gym: String, dropped: String, nowhere: String) {
         self.waste = waste
         self.sapiist = sapiist
         self.gym = gym
@@ -689,7 +689,7 @@ extension ATApiServer {
     ///   - unleashing: 产品id
     ///   - info: 参数
     ///   - callback: <#callback description#>
-    @objc func saveUserAuthenticationInfo(unleashing: String, info: [String: String],  callback: @escaping (Bool) -> Void) {
+    @objc public func saveUserAuthenticationInfo(unleashing: String, info: [String: String],  callback: @escaping (Bool) -> Void) {
         SVProgressHUD.show()
         var par = info
         par["unleashing"] = unleashing
@@ -730,7 +730,7 @@ extension ATApiServer {
     ///   - unleashing: <#unleashing description#>
     ///   - info: <#info description#>
     ///   - callback: <#callback description#>
-    @objc func saveJobInformation(unleashing: String, info: [String: String],  callback: @escaping (Bool) -> Void) {
+    @objc public func saveJobInformation(unleashing: String, info: [String: String],  callback: @escaping (Bool) -> Void) {
         SVProgressHUD.show()
         var par = info
         par["unleashing"] = unleashing

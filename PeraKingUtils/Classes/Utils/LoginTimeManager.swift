@@ -8,9 +8,9 @@
 //  
 import Foundation
 
-class LoginTimeManager {
+public class LoginTimeManager {
     // 单例模式
-    static let shared = LoginTimeManager()
+    public static let shared = LoginTimeManager()
     
     // 存储键名
     private let loginTimeKey = "LoginTimeHistory"
@@ -19,7 +19,7 @@ class LoginTimeManager {
     private init() {}
     
     /// 保存当前登录时间（时间戳，毫秒）
-    func saveLoginTime() {
+    public func saveLoginTime() {
         // 获取当前时间戳（毫秒）
         let currentTime = Date().timeIntervalSince1970 * 1000
         // 从 UserDefaults 中读取历史登录时间
@@ -32,7 +32,7 @@ class LoginTimeManager {
     }
     
     /// 获取上次登录时间（时间戳，毫秒）
-    func getLastLoginTime() -> Double? {
+    public func getLastLoginTime() -> Double? {
         // 从 UserDefaults 中读取历史登录时间
         guard let loginTimeHistory = UserDefaults.standard.array(forKey: loginTimeKey) as? [Double] else {
             print("没有登录时间历史")
@@ -54,7 +54,7 @@ class LoginTimeManager {
     }
     
     /// 清空登录时间历史
-    func clearLoginTimeHistory() {
+    public func clearLoginTimeHistory() {
         UserDefaults.standard.removeObject(forKey: loginTimeKey)
         print("登录时间历史已清空")
     }

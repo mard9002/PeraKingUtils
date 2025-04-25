@@ -1,6 +1,6 @@
 import UIKit
 
-class StepProgressView: UIView {
+public class StepProgressView: UIView {
     
     // MARK: - 属性
     
@@ -34,7 +34,7 @@ class StepProgressView: UIView {
     /// - Parameters:
     ///   - frame: 视图框架
     ///   - numberOfSteps: 步骤总数量
-    init(frame: CGRect, numberOfSteps: Int) {
+    public init(frame: CGRect, numberOfSteps: Int) {
         self.numberOfSteps = max(2, numberOfSteps) // 至少需要2个步骤
         super.init(frame: frame)
         setupView()
@@ -148,7 +148,7 @@ class StepProgressView: UIView {
     
     // MARK: - 布局
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
         // 重新创建布局，以适应大小变化
@@ -187,7 +187,7 @@ class StepProgressView: UIView {
     ///   - lineHeight: 连接线高度
     ///   - activeColor: 激活状态颜色
     ///   - inactiveColor: 未激活状态颜色
-    func configure(stepSize: CGFloat? = nil, lineHeight: CGFloat? = nil, activeColor: UIColor? = nil, inactiveColor: UIColor? = nil) {
+    public func configure(stepSize: CGFloat? = nil, lineHeight: CGFloat? = nil, activeColor: UIColor? = nil, inactiveColor: UIColor? = nil) {
         
         if let stepSize = stepSize {
             self.stepPointSize = stepSize
